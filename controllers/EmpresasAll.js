@@ -1,10 +1,8 @@
-const Modelos = require('../models');
+const {Empresas} = require('../models/index');
 
 const EmpresasAll = (req,res) => {
-    Modelos.findAll()
-    .then(empresas => {
-        res.json(empresas)
-    })
+    Empresas.findAll()
+    .then(empresas => res.json(empresas))
     .catch( err => res.json({msn: err}))
 }
 
