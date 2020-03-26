@@ -1,6 +1,6 @@
 const {Empresas} = require('../models/index');
 
-const EmpresasAll = (req,res) => {
+const EmpresasId = (req,res) => {
     let _id = req.params.id;
     Empresas.findAll({
         where:{

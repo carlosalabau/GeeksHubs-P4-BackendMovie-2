@@ -9,7 +9,8 @@ module.exports = (sequelize, DataTypes) => {
     // associations can be defined here
     Empleados.belongsTo(models.Empresas);
     Empleados.belongsToMany(models.Proyectos,{
-      through: 'EmpleadosProyecto'
+      through: 'EmpleadosProyecto',
+      foreignKey: 'ProyectoId'
     })
   };
   return Empleados;
