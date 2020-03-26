@@ -7,8 +7,8 @@ module.exports = {
     
     const proyectos = Array(20).fill().map(() => Object.assign({
       nombre: fakerEn.name.jobArea(),
-      createAt: new Date(),
-      updateAt: new Date()
+      createdAt: new Date(),
+      updatedAt: new Date()
     }))
 
     return queryInterface.bulkInsert('Proyectos',proyectos,{})

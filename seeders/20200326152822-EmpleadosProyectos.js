@@ -8,8 +8,8 @@ module.exports = {
     const empleadosproyectos  = Array(3).fill().map(()=> Object.assign({
       EmpleadoId: faker.random.number({min:1,max:30}),
       ProyectoId: faker.random.number({min:1,max:20}),
-      createAt: new Date(),
-      updateAt: new Date()
+      createdAt: new Date(),
+      updatedAt: new Date()
     }))
 
     return queryInterface.bulkInsert('EmpleadosProyectos', empleadosproyectos,{})

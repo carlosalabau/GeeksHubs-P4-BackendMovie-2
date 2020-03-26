@@ -9,8 +9,8 @@ module.exports = {
       nombre: fakerEn.company.companyName(),
       ciudad: fakerEn.address.city(),
       EmpleadoId: fakerEn.random.number({min:1,max:30}),
-      createAt: new Date(),
-      updateAt: new Date()
+      createdAt: new Date(),
+      updatedAt: new Date()
     }))
 
     return queryInterface.bulkInsert('Empresas',empresas,{})
