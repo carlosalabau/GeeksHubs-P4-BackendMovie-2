@@ -1,7 +1,9 @@
-const {Proyectos} = require('../models/index');
+const {Proyectos, Empleados} = require('../models/index');
 
 const ProyectosAll = (req,res) => {
-    Proyectos.findAll()
+    Proyectos.findAll({
+        include: [Empleados]
+    })
     .then(Proyectos => res.json(Proyectos))
     .catch( err => res.json({msn: err}))
 }
